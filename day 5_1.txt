@@ -1,0 +1,136 @@
+console.log("hi")
+var array = [1, 3, 4, 2, 5, 12, 25, 34, 33, 38, 42, 39];
+var Strings = ["hi", "Hello", "gUvi", "Chaitanya"];
+var odds = [];
+var oddCount = 0;
+// odd numbers in an array
+function odd(array) {
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      odds[oddCount] = array[i];
+      oddCount++;
+
+    }
+  }
+  console.log(odds)
+}
+----------------------------------------------------------------------------
+
+
+
+//Convert all the strings to title caps in a string array
+
+var CapStrings = [];
+function Caps(Strings) {
+  for (var j = 0; j < Strings.length; j++) {
+    CapStrings[j] = Strings[j].toUpperCase();
+  }
+  console.log(CapStrings)
+}
+Caps(Strings);
+--------------------------------------------------------------------------
+
+//Sum of all numbers in an array
+function Sum(g) {
+  var Sums = 0;
+  for (var k = 0; k < g.length; k++) {
+    Sums = Sums + g[k];
+  }
+  console.log(Sums)
+}
+Sum(array)
+
+-----------------------------------------------------------------------
+
+// Return all the prime numbers in an array
+function PrimeNumber(array) {
+  var prime = [];
+  var cc = 0
+  for (var l = 0; l < array.length; l++) {
+    var primeCount = 0;
+    for (var ll = 2; ll < array[l]; ll++) {
+
+      if (array[l] % ll === 0) {
+        primeCount++;
+      }
+    }
+    if (primeCount === 0) {
+      prime[cc] = array[l];
+      cc++;
+    }
+  }
+  console.log(prime)
+}
+PrimeNumber(array);
+---------------------------------------------------------------------
+
+// Return all the palindromes in an array
+
+var arr = ["Madam", "hello", "Level", "Noon", 'sorry']
+
+for (var p = 0; p < arr.length; p++) {
+  arr[p] = arr[p].toUpperCase();
+}
+function palindromes(arr) {
+  var pali = []
+  var palicount = 0
+  for (var o = 0; o < arr.length; o++) {
+    var p = arr[o];
+    arr[o] = arr[o].split("").reverse().join("");
+    if (p === arr[o]) {
+      pali[palicount] = arr[o];
+      palicount++;
+    }
+  }
+  console.log(pali)
+}
+palindromes(arr)
+---------------------------------------------------------------------------
+// Return median of two sorted arrays of same size
+
+var arr_1 = [1, 2, 6, 3, 4];
+var arr_2 = [9, 10, 5, 8, 7]
+var newArray = [];
+var qq = 0
+function median(arr_1, arr_2) {
+  // merging of 2 Array
+  for (var u = 0; u < arr_1.length + arr_2.length; u++) {
+    if (u < arr_1.length) {
+      newArray[qq] = arr_1[u]
+      qq++;
+    } else {
+      newArray[qq] = arr_2[u - arr_1.length];
+      qq++;
+    }
+  }
+  //assending order in an array
+  for (var uu = 0; uu < newArray.length - 1; uu++) {
+    for (y = uu + 1; y < newArray.length; y++) {
+      if (newArray[uu] > newArray[y]) {
+        var hh = newArray[y];
+        newArray[y] = newArray[uu];
+        newArray[uu] = hh;
+      }
+    }
+  }
+  if (newArray.length % 2 === 0) {
+    var median = (newArray[((newArray.length) / 2)] + newArray[(((newArray.length) / 2) + 1)]) / 2
+  } else {
+    var median = newArray[(newArray.length) / 2]
+  }
+  console.log(median)
+}
+median(arr_1, arr_2)
+
+------------------------------------------------------------------------------------------
+
+// Remove duplicates from an array 
+var Darr = [1, 2, 3, 1, 2, 3, 5, 2, 2]
+function duplicates(g) {
+  var duplicateArray = [...new Set(Darr)];
+  console.log(duplicateArray);
+}
+duplicates(Darr)
+
+----------------------------------------------------------------------------------------------
+

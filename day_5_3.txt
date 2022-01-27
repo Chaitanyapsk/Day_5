@@ -1,0 +1,61 @@
+//Print odd numbers in an array
+var array = [1, 3, 4, 2, 5, 12, 25, 34, 33, 38, 42, 39];
+var odds = [];
+var oddCount = 0;
+let odd=(array)=>{
+    for (var i = 0; i < array.length; i++) {
+    if (array[i] % 2 !== 0) {
+      odds[oddCount] = array[i];
+      oddCount++;
+
+    }
+  }
+  console.log(odds)
+}
+odd(array);
+
+
+//2.Convert all the strings to title caps in a string array
+var Strings = ["hi", "Hello", "gUvi", "Chaitanya"];
+var CapStrings = [];
+let strings=(strings)=>{
+    for (var j = 0; j < Strings.length; j++) {
+    CapStrings[j] = Strings[j].toUpperCase();
+  }
+   console.log(CapStrings)
+}
+strings(Strings);
+
+
+//3Sum of all numbers in an array
+var Sums = 0;
+let sum=(g)=>{
+  
+  for (var k = 0; k < g.length; k++) {
+    Sums = Sums + g[k];
+  }
+  console.log(Sums)
+}
+sum(array)
+
+//4.  Return all the prime numbers in an array
+
+let PrimeNumber=(array)=>{
+    var prime = [];
+  var cc = 0
+  for (var l = 0; l < array.length; l++) {
+    var primeCount = 0;
+    for (var ll = 2; ll < array[l]; ll++) {
+
+      if (array[l] % ll === 0) {
+        primeCount++;
+      }
+    }
+    if (primeCount === 0) {
+      prime[cc] = array[l];
+      cc++;
+    }
+  }
+  console.log(prime)
+}
+PrimeNumber(array);
